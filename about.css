@@ -1,0 +1,212 @@
+/* ==========================
+   RESET & BASE STYLE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg, #fff7e6, #fce6c9);
+  color: #4b1c1c;
+  line-height: 1.7;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+@keyframes fadeSlide {
+  0%{
+    opacity:0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%{ text-shadow: 0 0 6px #ffd700;}
+  100%{ text-shadow: 0 0 18px #ffd700;}
+}
+
+/* ==========================
+   ABOUT HERO
+========================== */
+#about-hero{
+  text-align:center;
+  padding: 90px 15px;
+  background: linear-gradient(to right, #4b1c1c, #800000);
+  color:#ffd700;
+  animation: fadeSlide 1.2s ease forwards;
+}
+
+#about-hero h1{
+  font-size:2.8rem;
+  margin-bottom:10px;
+  animation: glow 2s infinite alternate;
+}
+
+#about-hero .tagline{
+  font-style: italic;
+  opacity:.95;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+#main-nav{
+  background:#800000;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+#main-nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+#main-nav li{
+  min-width: 110px;
+  text-align:center;
+}
+
+#main-nav a{
+  display:block;
+  color:#ffd700;
+  text-decoration:none;
+  padding:8px 0;
+  font-weight:bold;
+  border-radius:6px;
+  transition:.3s ease;
+}
+
+#main-nav a:hover{
+  background:#ffd700;
+  color:#800000;
+  transform: translateY(-3px);
+}
+  
+  /* FORCE NAV TO ALWAYS STAY HORIZONTAL */
+#main-nav ul{
+  flex-direction: row !important;
+}
+
+/* ==========================
+   MAIN CONTENT WRAPPER
+========================== */
+#about-content{
+  max-width:1100px;
+  margin:auto;
+  padding: 60px 20px;
+}
+
+/* ==========================
+   SECTION DESIGN
+========================== */
+section{
+  background: #fff;
+  margin-bottom:60px;
+  padding:40px;
+  border-radius:16px;
+  border-left:16px solid #800000;
+  box-shadow:0 15px 30px rgba(0,0,0,0.08);
+  animation: fadeSlide .8s ease forwards;
+}
+
+/* Section titles */
+section h2{
+  color:#800000;
+  font-size:2rem;
+  border-bottom:3px solid #ffd700;
+  display:inline-block;
+  margin-bottom:20px;
+  padding-bottom:5px;
+}
+
+/* ==========================
+   PARAGRAPHS (Animated)
+========================== */
+section p{
+  margin-bottom:15px;
+  opacity:0;
+  animation: fadeSlide 1s ease forwards;
+  animation-delay: .3s;
+}
+
+/* ==========================
+   LIST DESIGN
+========================== */
+section ul{
+  list-style:none;
+  margin-top:25px;
+}
+
+section li{
+  background: linear-gradient(90deg,#ffe6a7,#fff5e0);
+  border-left:6px solid #800000;
+  margin-bottom:12px;
+  padding:13px 15px;
+  border-radius:8px;
+  font-weight:500;
+  transition:.3s ease;
+  opacity:0;
+  animation: fadeSlide .8s ease forwards;
+}
+
+section li:nth-child(1){animation-delay:.2s;}
+section li:nth-child(2){animation-delay:.4s;}
+section li:nth-child(3){animation-delay:.6s;}
+section li:nth-child(4){animation-delay:.8s;}
+section li:nth-child(5){animation-delay:1s;}
+
+section li:hover{
+  transform: translateX(10px);
+  background: linear-gradient(90deg,#ffd700,#fff0c0);
+  box-shadow:0 6px 12px rgba(0,0,0,.1);
+}
+
+/* ==========================
+   STRONG & EMP TAGS
+========================== */
+strong{
+  color:#800000;
+}
+
+em{
+  color:#b8860b;
+  font-weight:bold;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+#footer{
+  background:#4b1c1c;
+  color:#ffd700;
+  padding:30px;
+  text-align:center;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width: 768px){
+  #about-hero h1{
+    font-size:2rem;
+  }
+
+  section{
+    padding:25px;
+  }
+
+  #main-nav ul{
+    flex-direction:column;
+    gap:15px;
+  }
+}
